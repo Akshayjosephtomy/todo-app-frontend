@@ -12,12 +12,12 @@ export class SigninComponent implements OnInit {
   constructor(private myrouter:Router,private myapi:ApiService ) { }
 
   email=""
-  pass=""
+  password=""
 
   readvalue=()=>{
     let data={
       "email":this.email,
-      "pass":this.pass
+      "password":this.password
     }
     console.log(data)
     this.myapi.signIn(data).subscribe(

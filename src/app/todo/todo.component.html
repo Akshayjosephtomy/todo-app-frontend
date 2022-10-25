@@ -1,0 +1,47 @@
+
+<div class="container">
+    <div class="row g-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <h5>Welcome {{name}}</h5>
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">todo</label>
+                    <textarea name="tweet" class="form-control" id="" cols="30" rows="10" [(ngModel)]="todo"></textarea>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Start date</label>
+                    <input type="date" name="start_date" [(ngModel)]="start_date" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">End Date</label>
+                    <input type="date" name="end_date" [(ngModel)]="end_date" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button class="btn btn-success" (click)="readvalue()">Submit</button>
+                </div>
+            </div><br>
+
+            <h4>My Todos</h4>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Sl No.</th>
+                    <th scope="col">Todo</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of todoData">
+                    <th scope="row">1</th>
+                    <td>{{i.todo}}</td>
+                    <td>{{i.start_date}}</td>
+                    <td>{{i.end_date}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+
+        </div>
+    </div>
+</div>
