@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-signin',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(private myrouter:Router,private myapi:ApiService) { }
+  constructor(private myrouter:Router,private myapi:ApiService ) { }
 
   email=""
   pass=""
@@ -23,7 +25,7 @@ export class SigninComponent implements OnInit {
         if (response.length>0) {
           localStorage.setItem("name",response[0].name)
           localStorage.setItem("userid",response[0].id)
-          this.myrouter.navigate(["/tweet"])
+          this.myrouter.navigate(["/todo"])
         } else {
           alert("Invalid Credentials")
         }
