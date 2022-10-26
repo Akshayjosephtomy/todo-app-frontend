@@ -11,6 +11,10 @@ export class ApiService {
   signIn=(data:any)=>{
     return this.http.post("http://localhost:8080/signin",data)
   }
+  
+  addUser=(data:any)=>{
+    return this.http.post("http://localhost:8080/signup",data)
+  }
 
   addTodo=(data:any)=>{
     return this.http.post("http://localhost:8080/addtodo",data)
