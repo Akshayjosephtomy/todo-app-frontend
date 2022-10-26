@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Todo App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page">Sign Up</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav><br>
+
+
+<div class="container">
+    <div class="row g-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3"><h4>Registration</h4>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="Name" class="form-label">Name</label>
+                    <input type="text" placeholder="Name" class="form-control" name="name" [(ngModel)]="name">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="D.O.B" class="form-label">D.O.B</label>
+                    <input type="date" placeholder="D.O.B" class="form-control" name="dob" [(ngModel)]="dob">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="D.O.B" class="form-label">Phone</label>
+                    <input type="text" placeholder="phone" class="form-control" name="phone" [(ngModel)]="phone">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="D.O.B" class="form-label">Address</label>
+                    <textarea name="address" [(ngModel)]="address" id="" cols="15" rows="5" class="form-control"></textarea>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="D.O.B" class="form-label">Email</label>
+                    <input type="email" placeholder="email" class="form-control" name="email" [(ngModel)]="email">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label class="form-label">Password</label>
+                    <input type="password" placeholder="password" class="form-control" name="password" [(ngModel)]="password">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label class="form-label">Password</label>
+                    <input type="password" placeholder="confirm password" class="form-control" name="cpassword" [(ngModel)]="cpassword">
+                </div>
+                
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button class="btn btn-success" (click)="readValue()" [disabled]="status">Sign Up</button>
+                </div>
+                <a routerLink="/">back to login...</a>
+        </div>
+    </div>
+    </div>
+</div>

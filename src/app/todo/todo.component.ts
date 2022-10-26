@@ -29,7 +29,7 @@ export class TodoComponent implements OnInit {
     this.myapi.addTodo(data).subscribe(
       (response)=>{
         console.log(response)
-        alert("Post Added successfully")
+        alert("Todo Added successfully")
       }
     )
     this.todo="",
